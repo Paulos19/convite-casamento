@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect } from "react";
 import confetti from "canvas-confetti";
@@ -17,7 +17,6 @@ import {
   ChevronDown,
   Navigation,
   Send,
-  AlertCircle
 } from "lucide-react";
 
 export default function WeddingLandingPage() {
@@ -208,7 +207,7 @@ export default function WeddingLandingPage() {
               />
             </div>
             <div className="absolute -bottom-4 -right-4 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-md border border-[#EAE3DA] max-w-[200px] text-center">
-              <p className="font-serif text-lg text-[#4A3E37]">"O melhor sim das nossas vidas!"</p>
+              <p className="font-serif text-lg text-[#4A3E37]">&ldquo;O melhor sim das nossas vidas!&rdquo;</p>
             </div>
           </div>
 
