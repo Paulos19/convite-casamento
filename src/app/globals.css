@@ -2,7 +2,8 @@
 
 :root {
   --font-serif: 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'Montserrat', system-ui, -apple-system, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 }
 
 body {
@@ -13,15 +14,72 @@ body {
   font-family: var(--font-serif);
 }
 
-@keyframes float {
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Grão analógico sutil para sensação de papel de alta gramatura e convite físico */
+.paper-texture {
+  background-color: #faf8f5;
+  background-image: radial-gradient(rgba(197, 160, 89, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Efeito dourado refinado */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #a88241 0%, #dfbf77 50%, #997334 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #bfa05e 0%, #dec487 50%, #ab8847 100%);
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 0 1px rgba(197, 160, 89, 0.28), 0 8px 30px -8px rgba(197, 160, 89, 0.22);
+}
+
+/* Animações suaves de elevação e orbe */
+@keyframes floatSlow {
   0%, 100% {
-    transform: translateY(0px);
+    transform: translateY(0px) rotate(0deg);
   }
   50% {
-    transform: translateY(-8px);
+    transform: translateY(-10px) rotate(0.5deg);
   }
 }
 
-.animate-float {
-  animation: float 4s ease-in-out infinite;
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.06);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+/* Custom scrollbar discreta */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #faf8f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #d9ccb8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bfa05e;
 }
